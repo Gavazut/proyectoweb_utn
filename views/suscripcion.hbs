@@ -1,0 +1,53 @@
+{{>header}}
+
+    {{>navbar}}
+
+
+<body>
+
+    <section class="container"> 
+
+    <h1>Suscribíte</h1>
+    <form action="/suscripcion" method="post">
+    <div class="mb-3">
+  <label for="nombre" class="form-label">Nombre</label>
+  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresá tu Nombre">
+    </div>
+
+    <div class="mb-3">
+  <label for="apellido" class="form-label">Apellido</label>
+  <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresá tu Apellido">
+    </div>
+
+
+<div class="mb-3">
+  <label for="email" class="form-label">Email</label>
+  <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Déjanos tu comentario</label>
+  <textarea class="form-control" id="comentario" rows="3"></textarea>
+</div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    </section>
+
+  <section>
+    <div class="imgLogo"> <img  src="assets/imagenes/logo.png" alt="" width="250" height="250"></div>
+     <h1 class="parrafos">¿Quienes sómos?</h1>
+     <p class="parrafos">En cannasalud, asumimos el compromiso de acercar a las personas todo el conocimiento necesario para que puedan
+       explorar los beneficios asociados al uso de la planta cannabis sativa y sus híbridos, de forma segura,
+       correctamente canalizada y responsable.
+       <br>
+       Por esto, actualizamos constantemente nuestros contenidos con la finalidad de brindarte los últimos y novedosos
+       resultados de las investigaciones, charlas, descubrimientos y debates legales que se están originando en torno a
+       las potenciales y propiedades medicinales de dicha planta.
+ 
+       ¡Bienvenidos a CannaSalud! 
+     </p>
+ <br><br><br><br>
+
+   </section>
+
+{{>footer}}
