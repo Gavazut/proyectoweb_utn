@@ -15,7 +15,6 @@ app.use("/assets", express.static(__dirname + "/public"))
 app.use(express.urlencoded({ extended: false }));
 app.use(require('./router/router'));
 app.use(require('./router/contacto'));
-app.use(require('./router/server.js'));
 
 app.listen(port, () => {
 console.log(`Usando el puerto http://localhost:${port}`);
