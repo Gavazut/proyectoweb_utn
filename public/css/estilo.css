@@ -5,6 +5,9 @@
 section .seccionFormulario{
     background-color: rgb(247, 247, 247);
 }
+.container {
+  padding: 5% 0;
+}
 /* header*/
 .bg-green{
     background-color: var(--main-color);
@@ -77,7 +80,9 @@ padding-right: 5rem;
   .parrafos{
       text-align: center;
     margin-top: 100px;
-    padding: 1px 480px;
+    max-width: 1024px;
+    margin: auto;
+    padding: 1px;
   }
   .parrafo2{
     text-align: justify;
@@ -85,8 +90,7 @@ padding-right: 5rem;
   padding: 1px 180px;
   }
 .Titulos{
-margin-top: 100px;
-margin-bottom: 100px;
+margin: 5% 0;
 text-align: center;
 }
 .textoContenido{
@@ -98,8 +102,8 @@ text-align: center;
 }
 .imgLogo{
     text-align: center;
-    margin-top: 10rem;
     margin-bottom: 2rem;
+    margin-top: 5%;
 }
   .carousel-item{
     width: 100%;
@@ -120,3 +124,30 @@ text-align: center;
     -o-background-size: contain;
     background-size: contain;
   }
+
+  @media (min-width: 576px) {
+    .parrafos{
+    margin: 50px auto;
+    max-width: 768px;
+    }
+    .colorNav{
+      font-size: 20px;
+  }
+  .linksExt {
+      height: 400px;
+  }
+ }
+    @media (min-width: 768px) {
+      .colorNav{
+        font-size: 24px;
+    }
+    .linksExt {
+      height: 500px;
+  }
+   }
+.carousel-inner {
+  max-width: 1256px;
+  margin: auto;
+  height: 600px;
+}
+  

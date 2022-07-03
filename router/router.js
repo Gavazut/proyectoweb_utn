@@ -17,7 +17,7 @@ conn.connect ((err) =>{
 
 })
 
-router.post ('/suscripcion', (req, res) =>{
+router.get ('/suscripcion', (req, res) =>{
     let sql = "SELECT * FROM suscriptores"
     let query = conn.query(sql, (err, results) =>{
         if (err) throw err;
@@ -27,56 +27,42 @@ router.post ('/suscripcion', (req, res) =>{
     });
 });
 
-router.post('/suscripcion', function(req,res){
-    db.serialize(()=>{
-      db.run('INSERT INTO emp(nombre,apellido,email,comentario) VALUES(?,?)', [req.body.id, req.body.name], function(err) {
-        if (err) {
-          return console.log(err.message);
-        }
-        console.log("New employee has been added");
-        res.send("New employee has been added into the database with ID = "+req.body.id+ " and Name = "+req.body.name);
-      });
-  });
-  });
+const autor = {
+    autor: 'Richard Moreno',
+    titulo: 'CannaSalud' } 
 
 router.get('/', (req,res) =>{
-    res.render('index', {
-        autor: 'Richard Moreno',
-        titulo: 'CannaSalud'
-    })
+    res.render('index', autor)
 });
 
 router.get('/contenidos', (req,res) =>{
-    res.render('contenidos')
+    res.render('contenidos', autor)
 });
 
 
 router.get('/suscripcion', (req,res) =>{
-    res.render('suscripcion')
+    res.render('suscripcion', autor)
 });
 
 
 router.get('/galeria', (req,res) =>{
-    res.render('galeria')
+    res.render('galeria', autor)
 });
 
 router.get("/contactos", (req,res) =>{
-    res.render('contactos')
+    res.render('contactos', autor)
 });
 
 router.get("/articulo1", (req,res) =>{
-    res.render('articulo1')
+    res.render('articulo1', autor)
 });
 
 router.get("/articulo2", (req,res) =>{
-    res.render('articulo2')
+    res.render('articulo2', autor)
 });
 
  router.get('/',(res,req) => {
         res.render('/estilo.css')
         });
 
-router.get('/', (req, res)=> {
-    res.send(' Hola mundo')
-})
 module.exports = router;
