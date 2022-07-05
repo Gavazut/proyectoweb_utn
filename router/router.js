@@ -3,20 +3,19 @@ const router = new Router();
 const mysql = require('mysql');
 
 // 
-
 const conn= mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'suscriptoresweb'
 })
+
+/*
 conn.connect ((err) =>{
     if (err) throw err;
     console.log("CONEXION ESTABLECIDA");
-
-
 })
-
+/*
 router.get ('/suscripcion', (req, res) =>{
     let sql = "SELECT * FROM suscriptores"
     let query = conn.query(sql, (err, results) =>{
@@ -26,7 +25,7 @@ router.get ('/suscripcion', (req, res) =>{
         });
     });
 });
-
+*/
 const autor = {
     autor: 'Richard Moreno',
     titulo: 'CannaSalud' } 
@@ -59,10 +58,9 @@ router.get("/articulo1", (req,res) =>{
 
 router.get("/articulo2", (req,res) =>{
     res.render('articulo2', autor)
-});
+ });
 
  router.get('/',(res,req) => {
         res.render('/estilo.css')
         });
-
-module.exports = router;
+    module.exports = router;
