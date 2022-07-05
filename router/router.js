@@ -3,14 +3,14 @@ const router = new Router();
 const mysql = require('mysql');
 
 // 
-const conn= mysql.createConnection({
+const conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'suscriptoresweb'
 })
 
-/*
+
 conn.connect ((err) =>{
     if (err) throw err;
     console.log("CONEXION ESTABLECIDA");
@@ -26,6 +26,11 @@ router.get ('/suscripcion', (req, res) =>{
     });
 });
 */
+
+//PROFE ESTA PARTE DEL CÓDIGO NO PUDE HACERLA ENCAJAR CON LA BASE DE DATOS//
+
+
+
 const autor = {
     autor: 'Richard Moreno',
     titulo: 'CannaSalud' } 
